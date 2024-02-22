@@ -1,0 +1,107 @@
+﻿<Window x:Class="HumanResourcesDepartmentWPFApp.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HumanResourcesDepartmentWPFApp"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize"
+        Title="Администрирование" Height="500" Width="900" Closing="AdminClose">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Image gif:ImageBehavior.AnimatedSource="/Images/ttt.gif" Margin="-192,127,-273,-154" Grid.ColumnSpan="3"/>
+
+
+
+
+        <!--Район-->
+        <DataGrid x:Name="AreaX"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False" 
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top"
+                  Height="300"
+                  Width="228"
+                  Margin="0,10,0,0" CellEditEnding="AreaCell">
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Удалить запись" Click="DeleteArea"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Id, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" Header="id" Width="50"/>
+                <DataGridTextColumn Binding="{Binding NameArea, UpdateSourceTrigger=PropertyChanged}" Header="Район" Width="170"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!--Подразделения-->
+        <DataGrid x:Name="SubX"
+                  VerticalAlignment="Top"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  Height="300" Margin="246,10,101,0" Grid.ColumnSpan="2" CellEditEnding="SubCell">
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Удалить запись" Click="DeleteSub"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Id, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" Header="id" Width="50"/>
+                <DataGridTextColumn Binding="{Binding NameDivisions, UpdateSourceTrigger=PropertyChanged}" Header="Подразделение" Width="180"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!--Должность и оклад-->
+        <DataGrid x:Name="JobX"
+                  Grid.Column="1"
+                  VerticalAlignment="Top"
+                  Height="300"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  Margin="216,10,10,0" Grid.ColumnSpan="2" CellEditEnding="JobCell">
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Удалить запись" Click="DeleteJobAndSalary"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Id, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" Header="id" Width="50"/>
+                <DataGridTextColumn Binding="{Binding NameJobTitle, UpdateSourceTrigger=PropertyChanged}" Header="Должность" Width="200"/>
+                <DataGridTextColumn Binding="{Binding Salary, UpdateSourceTrigger=PropertyChanged}" Header="Оклад" Width="200"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Добавить запись" 
+                Background="AliceBlue"
+                HorizontalAlignment="Left"
+                Margin="56,339,0,0" 
+                VerticalAlignment="Top"
+                Width="116" 
+                Height="37" Click="Button_Click"/>
+        <Button Content="Добавить запись" 
+            Background="AliceBlue"
+            HorizontalAlignment="Left"
+            Margin="45,339,0,0" 
+            VerticalAlignment="Top"
+            Width="116" 
+            Height="37" Grid.Column="2" Click="Button_Click_2"/>
+        <Button Content="Добавить запись" 
+            Background="AliceBlue"
+            HorizontalAlignment="Left"
+            Margin="14,339,0,0" 
+            VerticalAlignment="Top"
+            Width="116" 
+            Height="37" Grid.Column="1" Click="Button_Click_1"/>
+
+
+
+
+    </Grid>
+</Window>

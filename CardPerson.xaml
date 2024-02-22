@@ -1,0 +1,30 @@
+﻿<Window x:Class="HumanResourcesDepartmentWPFApp.CardPerson"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HumanResourcesDepartmentWPFApp"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize"
+        Title="Карточка Тюленя" Height="496" Width="394">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="79,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" Height="22"><Run Language="ru-ru" Text="ФИО"/></TextBlock>
+        <TextBlock x:Name="FioX" HorizontalAlignment="Left" Margin="191,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" Height="22"><Run Language="ru-ru" Text="ФИО"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="35,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="118" Height="22"><Run Text="Район"/><Run Language="ru-ru" Text=" проживания"/></TextBlock>
+        <TextBlock x:Name="AreaX" HorizontalAlignment="Left" Margin="191,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" Height="28"><Run Language="ru-ru" Text="Район"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="40,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="108" Height="22"><Run Text="Адрес"/><Run Language="ru-ru" Text=" проживания"/></TextBlock>
+        <TextBlock x:Name="AdresX" HorizontalAlignment="Left" Margin="191,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" Height="22"><Run Language="ru-ru" Text="Адрес"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="82,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="32" Height="22"><Run Language="ru-ru" Text="ИНН"/></TextBlock>
+        <TextBlock x:Name="InnX" HorizontalAlignment="Left" Margin="191,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Height="22"><Run Language="ru-ru" Text="ИНН"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="42,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Height="22"><Run Language="ru-ru" Text="Количество детей"/></TextBlock>
+        <TextBlock x:Name="CountX" HorizontalAlignment="Left" Margin="191,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Height="22"><Run Language="ru-ru" Text="Количество детей"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="46,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="108" Height="21"><Run Language="ru-ru" Text="Подразделение"/></TextBlock>
+        <TextBlock x:Name="PodrX" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" Height="21" Margin="191,187,0,0"><Run Language="ru-ru" Text="Подразделение"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="61,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Height="22"><Run Language="ru-ru" Text="Должность"/></TextBlock>
+        <TextBlock x:Name="DolX" HorizontalAlignment="Left" Margin="191,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Height="22"><Run Language="ru-ru" Text="Должность"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="78,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" Height="22"><Run Language="ru-ru" Text="Оклад"/></TextBlock>
+        <TextBlock x:Name="OkX" HorizontalAlignment="Left" Margin="191,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Height="22"><Run Language="ru-ru" Text="Оклад"/></TextBlock>
+        <Image gif:ImageBehavior.AnimatedSource="/Images/awaitT.gif" Margin="19,297,43,0"/>
+
+    </Grid>
+</Window>
